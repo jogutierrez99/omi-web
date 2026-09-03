@@ -1,11 +1,4 @@
+import Image from "next/image";
 export function AboutUs() {
-  return (
-    <section id="sobre-nosotros" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre nosotros</h2>
-      <p>
-        Trabajamos para ofrecer un servicio cercano, claro y comprometido con
-        cada cliente.
-      </p>
-    </section>
-  );
+  return <section id="calidad" aria-labelledby="quality-title" className="relative overflow-hidden bg-[#eef8ff]"><div className="page-container grid min-h-[460px] items-center lg:grid-cols-2"><div className="relative z-10 py-16 lg:pr-16"><p className="eyebrow">Nuestro compromiso</p><h2 id="quality-title" className="mt-3 text-4xl font-bold tracking-tight text-[#061643]">Compromiso con la calidad</h2><p className="mt-6 max-w-lg leading-7 text-slate-700">Cuidamos cada detalle para que disfrutes de un agua fresca y pura. Nuestro compromiso es acompañarte con un servicio confiable y cercano.</p></div><div className="relative h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-1/2"><Image src="/images/generated/mountain-lake.png" alt="Lago de montaña que representa el origen natural del agua" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" /><div className="absolute inset-0 bg-gradient-to-r from-[#eef8ff] via-transparent to-transparent" /></div></div></section>;
 }

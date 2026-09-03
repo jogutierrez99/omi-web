@@ -1,14 +1,4 @@
 import Link from "next/link";
-
 export function Footer() {
-  return (
-    <footer>
-      <p>OMI</p>
-      <nav aria-label="Navegación del pie de página">
-        <Link href="#servicios">Servicios</Link>
-        <Link href="#sobre-nosotros">Sobre nosotros</Link>
-        <Link href="#contacto">Contacto</Link>
-      </nav>
-    </footer>
-  );
+  return <footer id="contacto" className="border-t border-blue-100 bg-[#f8fcff] py-12 text-[#061643]"><div className="page-container grid gap-10 md:grid-cols-3 md:items-start"><div><p className="text-3xl font-extrabold tracking-[-.06em]">OMI</p><p className="mt-3 text-sm text-slate-600">Agua mineral natural</p></div><div><h2 className="font-bold">Contacto</h2><p className="mt-3 text-sm leading-6 text-slate-600">Próximamente encontrarás aquí nuestros datos de atención.</p></div><nav aria-label="Navegación del pie de página"><p className="font-bold">Explora</p><div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600"><Link href="#nuestra-agua">Nuestra agua</Link><Link href="#formatos">Formatos</Link><Link href="#calidad">Calidad</Link></div></nav></div><div className="page-container mt-10 border-t border-blue-100 pt-6 text-xs text-slate-500">© OMI</div></footer>;
 }

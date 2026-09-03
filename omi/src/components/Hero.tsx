@@ -1,9 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export function Hero() {
-  return (
-    <section id="inicio" aria-labelledby="hero-title">
-      <p>Bienvenido a OMI</p>
-      <h1 id="hero-title">Soluciones pensadas para ti</h1>
-      <p>Descubre nuestros servicios y encuentra la opción que necesitas.</p>
-    </section>
-  );
+  return <section id="inicio" aria-labelledby="hero-title" className="hero-bg relative overflow-hidden"><div className="page-container grid min-h-[620px] items-center gap-2 pt-14 lg:min-h-[680px] lg:grid-cols-[.86fr_1.14fr] lg:pt-0"><div className="relative z-10 py-8 lg:py-16"><p className="eyebrow">Agua mineral natural</p><h1 id="hero-title" className="mt-4 max-w-xl text-5xl font-bold leading-[1.02] tracking-[-.045em] text-[#061643] sm:text-6xl lg:text-7xl">Pureza que acompaña tu día</h1><p className="mt-6 max-w-md text-lg leading-8 text-slate-700">Agua mineral pensada para acompañarte en casa, en el trabajo y en cada momento del día.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="#formatos" className="button-primary">Conoce nuestros formatos</Link><Link href="#contacto" className="button-secondary">Contáctanos</Link></div></div><div className="relative min-h-[340px] self-end lg:min-h-[560px]"><Image src="/images/generated/water-lineup.png" alt="Distintos formatos de agua mineral OMI" fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain object-bottom" /></div></div><div className="wave" aria-hidden="true" /></section>;
 }

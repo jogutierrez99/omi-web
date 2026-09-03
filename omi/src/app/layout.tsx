@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OMI",
-  description: "Conoce los servicios y promociones de OMI.",
+  title: "OMI | Agua mineral natural",
+  description: "Conoce el agua mineral OMI y sus formatos para cada momento.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
