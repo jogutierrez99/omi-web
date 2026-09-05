@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 const links = [["#inicio", "Inicio"], ["#nuestra-agua", "Nuestra agua"], ["#formatos", "Formatos"], ["#calidad", "Calidad"], ["#sostenibilidad", "Sostenibilidad"], ["#contacto", "Contacto"]];
 
 function Logo() {
-  return <span className="flex items-center gap-2 text-2xl font-extrabold tracking-[-.07em] text-[#061643]"><span className="grid size-10 place-items-center rounded-full bg-[#061643] text-lg text-white">O</span>OMI</span>;
+  return <Image src="/images/brand/omi-logo.png" alt="" width={1962} height={802} priority sizes="(min-width: 1024px) 112px, 93px" className="h-10 w-auto object-contain lg:h-12" />;
 }
 
 export function Navbar() {
