@@ -21,11 +21,11 @@ export function Hero() {
           <div className="absolute bottom-0 left-[18%] z-20 w-[54%] lg:left-[19%] lg:w-[56%]">
             <Image src="/images/products/water-18l.png" alt="" width={1122} height={1402} priority unoptimized sizes="(max-width: 1024px) 54vw, 34vw" className="h-auto w-full object-contain" />
           </div>
-          <div className="absolute bottom-[3%] left-[49%] z-40 w-[30%] lg:left-[49%] lg:w-[32%]">
-            <Image src="/images/products/water-1-5l.png" alt="" width={1122} height={1402} unoptimized sizes="(max-width: 1024px) 30vw, 19vw" className="h-auto w-full object-contain" />
+          <div className="absolute bottom-[3%] left-[49%] z-40 w-[33%] lg:left-[49%] lg:w-[34%]">
+            <Image src="/images/products/water-1-5l.png" alt="" width={1122} height={1402} unoptimized sizes="(max-width: 1024px) 33vw, 20vw" className="h-auto w-full object-contain" />
           </div>
-          <div className="absolute bottom-[5%] left-[64%] z-30 w-[23%] lg:left-[64%] lg:w-[25%]">
-            <Image src="/images/products/water-300cc.png" alt="" width={1024} height={1536} unoptimized sizes="(max-width: 1024px) 23vw, 15vw" className="h-auto w-full object-contain" />
+          <div className="absolute bottom-[5%] left-[68%] z-30 w-[20%] lg:left-[68%] lg:w-[20%]">
+            <Image src="/images/products/water-300cc.png" alt="" width={1024} height={1536} unoptimized sizes="(max-width: 1024px) 20vw, 12vw" className="h-auto w-full object-contain" />
           </div>
         </div>
       </div>
