@@ -2,11 +2,11 @@
 
 ## Packshot completo
 
-> Usa `image_orchestrator` para producir un packshot horizontal de 500 ml, 1,5 L, 5 L y 18 L. Toma `docs/image-agents/assets/omi-products-approved-reference.png` como referencia de producto y el PDF original como fuente de marca. Fondo blanco azulado, superficie con reflejo suave y etiquetas transparentes. Aplica los elementos exactos con `brand_compositor` y no termines sin `image_visual_qa = PASS`.
+> Usa `image_orchestrator` para producir un packshot horizontal de 300 cc, 1,5 L, 5 L y 18 L. Toma `docs/image-agents/assets/omi-products-approved-reference.png` como referencia estética de producto, pero corrige el formato pequeño a 300 cc según `docs/agents/OMI_BUSINESS_CONTEXT.md`; usa el PDF original como fuente de marca. Fondo blanco azulado, superficie con reflejo suave y etiquetas transparentes. Aplica los elementos exactos con `brand_compositor` y no termines sin `image_visual_qa = PASS`.
 
 ## Cambio localizado
 
-> Usa el flujo visual para convertir únicamente las etiquetas de 500 ml, 1,5 L y 5 L en film transparente. Conserva idénticos botellas, encuadre, fondo, iluminación, posiciones, logo, textos y formato de 18 L. Haz una sola edición y ejecuta QA comparativo.
+> Usa el flujo visual para convertir únicamente las etiquetas de 300 cc, 1,5 L y 5 L en film transparente. Conserva idénticos botellas, encuadre, fondo, iluminación, posiciones, logo, textos y formato de 18 L. Haz una sola edición y ejecuta QA comparativo.
 
 ## Productos sin fondo
 

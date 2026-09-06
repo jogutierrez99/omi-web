@@ -1,38 +1,74 @@
 # Contexto de proyecto — OMI
 
-Este archivo es contexto auxiliar y vivo. El repositorio siempre prevalece. Los agentes deben verificar los campos marcados como `por verificar` antes de basar una decisión en ellos.
+Este archivo es contexto auxiliar y vivo. El repositorio prevalece para decisiones técnicas y `docs/agents/OMI_BUSINESS_CONTEXT.md` prevalece para hechos corporativos confirmados.
 
-## Identidad
+## Identidad del proyecto
 
 | Campo | Valor | Estado |
 |---|---|---|
-| Proyecto | OMI | confirmado |
-| Tipo de trabajo | Web / frontend | confirmado |
+| Empresa | Embotelladora OMI C.A. | confirmado |
+| Marca | OMI | confirmado |
+| Sector | Embotellado y comercialización de agua mineral | confirmado |
+| Inicio de actividad | Finales de 2017 | confirmado por la empresa |
+| Ubicación general | Maracay, estado Aragua, Venezuela | confirmado |
+| Dirección de referencia | Intercomunal Turmero-Maracay, sector La Providencia | confirmado; falta dirección postal exacta |
+| Tipo de trabajo | Web, frontend y producción visual | confirmado |
 | Framework esperado | Next.js | confirmado por el contexto inicial; verificar versión |
 | Lenguaje esperado | TypeScript | por verificar en el repositorio |
 | Sistema de estilos | Detectar en el repositorio | por verificar |
 | Gestor de paquetes | Detectar mediante lockfile | por verificar |
 | Arquitectura de rutas | Detectar App Router o Pages Router | por verificar |
 
-## Principios iniciales
+## Objetivos de la web
 
-- La web debe transmitir profesionalidad, claridad y confianza.
-- La experiencia móvil tiene la misma prioridad que escritorio.
-- Se deben reutilizar el branding y los componentes existentes antes de crear un sistema paralelo.
-- El rendimiento, la accesibilidad y la mantenibilidad forman parte de la aceptación.
-- No se deben inventar datos comerciales, testimonios, precios o funcionalidades.
+- Presentar a OMI como una embotelladora profesional, cercana y confiable.
+- Explicar el origen en pozo profundo y las características declaradas del agua.
+- Mostrar los formatos comerciales actuales y sus unidades por gavera.
+- Facilitar ubicación, contacto, redes y futuras solicitudes de franquicia.
+- Dar protagonismo visual al producto sin sacrificar claridad, rendimiento o accesibilidad.
+- Diferenciar hechos confirmados de claims pendientes de respaldo.
+
+## Arquitectura de contenido aprobada
+
+1. Inicio / hero.
+2. Quiénes somos.
+3. Nuestra agua.
+4. Productos.
+5. Calidad y reconocimiento.
+6. Franquicias.
+7. Dónde estamos, con mapa.
+8. Contacto y redes sociales.
+
+La propuesta visual anterior puede conservar bloques de uso cotidiano, recarga, sostenibilidad y CTA siempre que no contradigan esta información ni inventen servicios.
+
+## Principios
+
+- Profesionalidad, claridad, confianza y frescura.
+- Experiencia móvil con la misma prioridad que escritorio.
+- Reutilizar branding y componentes existentes.
+- Rendimiento, accesibilidad y mantenibilidad forman parte de la aceptación.
+- No inventar datos, testimonios, reconocimientos, precios, beneficios sanitarios o funcionalidades.
+- El copy público debe proceder de `docs/content/WEBSITE_COPY_ES.md`.
 
 ## Fuentes de verdad
 
-Orden para decisiones técnicas:
+### Decisiones técnicas
 
 1. Petición actual del usuario.
 2. `AGENTS.md` aplicable.
 3. Código y configuración del repositorio.
-4. Criterios aprobados del workflow actual.
+4. Criterios aprobados del workflow.
 5. Este documento.
 
-## Inventario por completar automáticamente durante tareas
+### Negocio y contenido
+
+1. Información corporativa confirmada por la empresa.
+2. `docs/agents/OMI_BUSINESS_CONTEXT.md`.
+3. Documentos oficiales, registros, análisis y certificados.
+4. `docs/content/WEBSITE_COPY_ES.md`.
+5. Materiales promocionales previos.
+
+## Inventario técnico por completar
 
 ```yaml
 framework_version: unknown
@@ -57,22 +93,30 @@ design_tokens: []
 known_constraints: []
 ```
 
-Los agentes pueden informar estos datos en sus outputs. No deben reescribir este archivo salvo que el usuario solicite mantener el contexto de proyecto actualizado.
-
 ## Decisiones aprobadas
 
-Añadir aquí únicamente decisiones confirmadas por el usuario o por el repositorio, con fecha y evidencia.
-
-| Fecha | Decisión | Evidencia | Alcance |
-|---|---|---|---|
-| — | Sin decisiones registradas todavía | — | — |
+| Fecha | Decisión | Alcance |
+|---|---|---|
+| 2026-09-05 | Equipo Codex con especialistas frontend, visuales y QA | Todo el repositorio |
+| 2026-09-05 | Etiquetas visuales transparentes y sello dorado en los formatos representados | Producción visual |
+| 2026-09-06 | Catálogo actual: 300 cc, 1,5 L, 5 L y 18 L | Web, contenido e imágenes |
+| 2026-09-06 | Estructura corporativa de ocho bloques principales | Arquitectura web |
 
 ## Riesgos conocidos
 
-No registrados todavía. QA y planificación deben comunicar cualquier riesgo descubierto sin convertirlo automáticamente en deuda aceptada.
+- El formato comercial pequeño confirmado es 300 cc. No usar capacidades anteriores como fuente de verdad.
+- Los claims de composición, baja mineralización, bajo sodio y ausencia de cloración deben vincularse a análisis y permisos vigentes antes de presentarse como certificados.
+- La recomendación sanitaria asociada al evento de café de 2024 necesita documentación y nombres oficiales.
+- Faltan datos completos de contacto, mapa y redes.
 
-## Pendientes de producto
+## Pendientes
 
-- Confirmar propuesta de valor y público principal de OMI cuando una decisión de producto lo requiera.
-- Confirmar identidad visual definitiva si no está codificada en el repositorio.
-
+- Teléfono y WhatsApp oficiales.
+- Correo confirmado para la web.
+- Dominio oficial.
+- Dirección postal exacta o coordenadas/enlace de Google Maps.
+- Usuarios y enlaces de redes sociales.
+- Horario de atención.
+- Nombre y evidencia del reconocimiento de 2024.
+- Registro sanitario, análisis físico-químico y soporte de claims públicos.
+- Condiciones y formulario deseado para futuras franquicias.

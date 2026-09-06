@@ -25,6 +25,8 @@ Habla con Codex desde la raíz del proyecto y nombra el orquestador:
 
 > Usa `image_orchestrator` y el equipo visual para crear un hero horizontal con los cuatro formatos OMI. Utiliza las referencias del proyecto como fuente de verdad, aplica la etiqueta exacta después de generar la escena y no termines sin QA PASS.
 
+Los formatos comerciales confirmados son 300 cc, 1,5 L, 5 L y 18 L. Las referencias anteriores no deben trasladar otra capacidad a nuevos recursos.
+
 Para una tarea simple no es obligatorio ejecutar todo el pipeline. El orquestador debe seleccionar solo las fases necesarias.
 
 ## Límites reales

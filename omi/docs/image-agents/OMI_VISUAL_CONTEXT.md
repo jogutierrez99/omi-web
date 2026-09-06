@@ -16,7 +16,7 @@ Este archivo reúne hechos observados en los recursos entregados. Actualízalo c
 
 | Formato | Envase | Tapa/asa | Etiqueta |
 |---|---|---|---|
-| 500 ml | Botella PET personal | Tapa blanca | Film transparente con impresión OMI |
+| 300 cc | Botella PET personal | Tapa blanca | Film transparente con impresión OMI |
 | 1,5 L | Botella PET alta | Tapa blanca | Film transparente con impresión OMI |
 | 5 L | Garrafa PET | Tapa y asa azules | Film transparente con impresión OMI |
 | 18 L | Botellón retornable azulado | Tapa azul | Branding frontal transparente con sello dorado |
@@ -24,6 +24,7 @@ Este archivo reúne hechos observados en los recursos entregados. Actualízalo c
 ## Reglas bloqueadas
 
 - No intercambiar capacidades entre formatos.
+- El formato pequeño comercial confirmado es 300 cc. Las referencias anteriores solo pueden usarse para estilo, no para definir la capacidad final.
 - No convertir las etiquetas transparentes en rectángulos blancos u opacos.
 - No cambiar el número de botellas solicitado.
 - No deformar el símbolo de gota ni las letras OMI.

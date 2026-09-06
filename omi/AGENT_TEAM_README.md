@@ -4,7 +4,7 @@ Este paquete configura un equipo especializado para trabajar en el frontend y pr
 
 ## Instalación
 
-1. Descomprime `omi-codex-agent-team.zip`.
+1. Descomprime `OMI_Equipo_Codex_Completo_v3.zip`.
 2. Copia **el contenido** de la carpeta descomprimida en la raíz del repositorio OMI.
 3. La raíz debe quedar con `AGENTS.md`, `.codex/` y `docs/` al mismo nivel que `package.json`.
 4. Cierra y vuelve a abrir la sesión de Codex para que vuelva a cargar las instrucciones y los agentes.
@@ -43,6 +43,7 @@ docs/
     06-frontend-orchestrator.md
     CONTRACTS.md
     PROJECT_CONTEXT.md
+    OMI_BUSINESS_CONTEXT.md
     PROMPT_EXAMPLES.md
     WORKFLOW.md
   image-agents/
@@ -56,6 +57,8 @@ docs/
     ASSET_MANIFEST.md
     PROMPT_EXAMPLES.md
     assets/
+  content/
+    WEBSITE_COPY_ES.md
 ```
 
 ## Cómo funciona
@@ -65,6 +68,8 @@ docs/
 Los documentos de `docs/agents/` explican en detalle los roles, límites, contratos y criterios de finalización. Los archivos TOML convierten esos diseños en agentes de proyecto invocables por Codex.
 
 El equipo visual separa tres responsabilidades que no deben confundirse: diseñar la dirección, generar la escena y aplicar de forma exacta los recursos de marca. Esta separación reduce deformaciones del logo, errores de texto y cambios accidentales entre iteraciones.
+
+El contexto corporativo incluye la historia, ubicación, características declaradas del agua, catálogo actual, reconocimiento, franquicias y estructura de contacto. `WEBSITE_COPY_ES.md` contiene una versión corregida y lista para integrar, con marcadores explícitos en los datos que todavía faltan.
 
 ## Primeras pruebas
 

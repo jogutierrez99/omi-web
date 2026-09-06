@@ -18,6 +18,8 @@ Documentación ampliada:
 - `docs/agents/WORKFLOW.md`
 - `docs/agents/CONTRACTS.md`
 - `docs/agents/PROJECT_CONTEXT.md`
+- `docs/agents/OMI_BUSINESS_CONTEXT.md`
+- `docs/content/WEBSITE_COPY_ES.md`
 - `docs/image-agents/00-README.md`
 - `docs/image-agents/AGENT_CATALOG.md`
 - `docs/image-agents/OMI_VISUAL_CONTEXT.md`
@@ -53,6 +55,7 @@ Antes de tomar decisiones técnicas o visuales:
 4. Localiza componentes, tokens y patrones reutilizables antes de crear otros nuevos.
 5. Revisa `git status` y conserva todos los cambios existentes del usuario.
 6. Usa `docs/agents/PROJECT_CONTEXT.md` como contexto auxiliar, pero el repositorio es la fuente de verdad técnica.
+7. Para contenido, producto, ubicación, historia o claims de OMI, lee `docs/agents/OMI_BUSINESS_CONTEXT.md`; no inventes ni completes datos comerciales ausentes.
 
 No presupongas una librería, versión, ruta, comando o arquitectura que no esté confirmada en el repositorio.
 
@@ -186,13 +189,24 @@ Máximo: 3 iteraciones automáticas de corrección. Si persiste el mismo defecto
 - La prioridad de fuente es: arte vectorial/PDF aprobado → PNG original con transparencia → fotografía real aprobada → imagen generada aprobada → descripción textual.
 - Conserva como invariantes el número de productos, formatos, proporciones, tapas, asas, materiales, logo, eslogan, capacidades, sello y disposición aprobada.
 - En OMI, la denominación es `AGUA MINERAL` y el eslogan exacto es `Tu salud lo vale`.
-- Los formatos conocidos son 500 ml, 1,5 L, 5 L y 18 L. No cambies una capacidad ni la intercambies entre envases.
+- Los formatos comerciales actuales confirmados son 300 cc, 1,5 L, 5 L y 18 L. No cambies una capacidad ni la intercambies entre envases.
 - Las etiquetas aprobadas son de film transparente: el plástico, el agua, las nervaduras y los reflejos deben verse en las zonas no impresas.
 - Usa siempre los archivos originales para logo, sello y textos finales. La IA puede integrar una aproximación durante el concepto, pero no constituye un master comercial.
 - Una edición debe declarar qué cambia y qué permanece bloqueado. Si la petición es local, no regeneres innecesariamente toda la escena.
 - Para fondos transparentes, exige canal alfa real. Un patrón de cuadros horneado en los píxeles es un defecto blocker.
 - Conserva el archivo master sin pérdida y crea derivados web aparte. No sobrescribas el master aprobado.
 - No declares fidelidad de impresión, color o troquel si no existen dimensiones, perfil y arte final del proveedor.
+
+## Normas de contenido corporativo
+
+- Mantén como hechos confirmados: nacimiento de Embotelladora OMI C.A. a finales de 2017; ubicación en Maracay, estado Aragua, sector La Providencia; origen en pozo profundo; mineralización suave; baja en sodio; y experiencia directiva declarada de 40 años en el sector del agua.
+- Corrige ortografía y estilo sin alterar el significado aportado por la empresa.
+- No publiques como hechos certificados expresiones médicas, sanitarias o regulatorias sin documentación. En particular, valida antes de afirmar: “agua orgánica”, “apta para bebés”, ausencia absoluta de cualquier tratamiento, recomendación oficial de un organismo sanitario o beneficios concretos para la salud.
+- Puede usarse `de origen natural` en lugar de `orgánica` hasta disponer de una certificación que autorice este último término.
+- Puede explicarse que no requiere procesos químicos como la cloración únicamente cuando lo respalden permisos, análisis y proceso productivo vigentes.
+- El reconocimiento de 2024 debe incluir el nombre oficial del evento y del organismo solo cuando exista evidencia documental.
+- No inventes teléfono, dominio, enlaces sociales, coordenadas, horarios, condiciones de franquicia, precios ni disponibilidad.
+- Para textos públicos usa `docs/content/WEBSITE_COPY_ES.md`. Conserva sus marcadores dentro del documento hasta recibir datos confirmados, pero nunca renderices `[PENDIENTE]`, `[CONFIRMAR]`, enlaces vacíos o información ficticia en producción; omite temporalmente esos campos y repórtalos.
 
 ## Validación
 

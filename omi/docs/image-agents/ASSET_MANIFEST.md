@@ -4,7 +4,7 @@
 |---|---|---:|---|
 | `assets/omi-label-original.pdf` | Arte original de etiqueta | 1 | Fuente principal para logo y elementos impresos |
 | `assets/omi-label-original.png` | Vista raster de etiqueta | 2 | Inspección rápida y composición cuando su resolución sea suficiente |
-| `assets/omi-products-approved-reference.png` | Referencia aprobada de formatos | 3 | Botellas, escala, etiquetas transparentes, sello y lenguaje fotográfico |
+| `assets/omi-products-approved-reference.png` | Referencia estética de formatos | 3 | Botellas, escala, etiquetas transparentes, sello y lenguaje fotográfico; la capacidad pequeña confirmada es 300 cc |
 | `assets/omi-website-reference.jpeg` | Contexto web anterior | 4 | Uso, composición y estilo; no es autoridad sobre geometría final |
 
 ## Reglas

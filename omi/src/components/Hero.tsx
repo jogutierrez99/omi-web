@@ -2,5 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
-  return <section id="inicio" aria-labelledby="hero-title" className="hero-bg relative overflow-hidden"><div className="page-container grid min-h-[620px] items-center gap-2 pt-14 lg:min-h-[680px] lg:grid-cols-[.86fr_1.14fr] lg:pt-0"><div className="relative z-10 py-8 lg:py-16"><p className="eyebrow">Agua mineral natural</p><h1 id="hero-title" className="mt-4 max-w-xl text-5xl font-bold leading-[1.02] tracking-[-.045em] text-[#061643] sm:text-6xl lg:text-7xl">Pureza que acompaña tu día</h1><p className="mt-6 max-w-md text-lg leading-8 text-slate-700">Agua mineral pensada para acompañarte en casa, en el trabajo y en cada momento del día.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="#formatos" className="button-primary">Conoce nuestros formatos</Link><Link href="#contacto" className="button-secondary">Contáctanos</Link></div></div><div className="relative min-h-[340px] self-end lg:min-h-[560px]"><Image src="/images/products/water-18l.png" alt="Formatos de agua mineral OMI de 500 mililitros, 1,5 litros, 5 litros y 18 litros" width={1122} height={1402} priority sizes="(max-width: 640px) 70vw, (max-width: 1024px) 56vw, 40vw" className="absolute bottom-0 left-[22%] h-auto w-[70%] object-contain sm:left-[25%] sm:w-[62%] lg:left-[20%] lg:w-[70%]" /><Image src="/images/products/water-5l.png" alt="" width={1122} height={1402} sizes="(max-width: 640px) 55vw, (max-width: 1024px) 44vw, 31vw" className="absolute bottom-0 left-[-6%] z-10 h-auto w-[55%] object-contain sm:left-[-2%] sm:w-[48%] lg:left-[-7%] lg:w-[55%]" /><Image src="/images/products/water-1-5l.png" alt="" width={1122} height={1402} sizes="(max-width: 640px) 39vw, (max-width: 1024px) 31vw, 22vw" className="absolute bottom-0 right-[3%] z-20 h-auto w-[39%] object-contain sm:right-[5%] sm:w-[34%] lg:right-[1%] lg:w-[38%]" /><Image src="/images/products/water-500ml.png" alt="" width={1122} height={1402} sizes="(max-width: 640px) 32vw, (max-width: 1024px) 26vw, 18vw" className="absolute bottom-0 right-[-10%] z-30 h-auto w-[32%] object-contain sm:right-[-6%] sm:w-[28%] lg:right-[-8%] lg:w-[32%]" /></div></div><div className="wave" aria-hidden="true" /></section>;
+  return (
+    <section id="inicio" aria-labelledby="hero-title" className="hero-bg relative overflow-hidden">
+      <div className="page-container grid min-h-[620px] items-center gap-2 pt-14 lg:min-h-[720px] lg:grid-cols-[.86fr_1.14fr] lg:pt-0">
+        <div className="relative z-10 py-8 lg:py-16">
+          <p className="eyebrow">Agua mineral natural</p>
+          <h1 id="hero-title" className="mt-4 max-w-xl text-5xl font-bold leading-[1.02] tracking-[-.045em] text-[#061643] sm:text-6xl lg:text-7xl">Pureza que acompaña tu día</h1>
+          <p className="mt-6 max-w-md text-lg leading-8 text-slate-700">Agua mineral pensada para acompañarte en casa, en el trabajo y en cada momento del día.</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link href="#formatos" className="button-primary">Conoce nuestros formatos</Link>
+            <Link href="#contacto" className="button-secondary">Contáctanos</Link>
+          </div>
+        </div>
+        <div className="relative z-10 min-h-[380px] w-full max-w-[720px] origin-bottom-left scale-[1.1] self-end sm:min-h-[470px] sm:scale-[1.12] lg:min-h-[600px] lg:scale-[1.15]" role="img" aria-label="Formatos de agua mineral OMI de 5 litros, 18 litros, 1,5 litros y 300 centímetros cúbicos">
+          <div className="absolute bottom-[2%] left-0 z-30 w-[40%] lg:w-[42%]">
+            <Image src="/images/products/water-5l.png" alt="" width={1122} height={1402} loading="eager" unoptimized sizes="(max-width: 1024px) 40vw, 25vw" className="h-auto w-full object-contain" />
+          </div>
+          <div className="absolute bottom-0 left-[18%] z-20 w-[54%] lg:left-[19%] lg:w-[56%]">
+            <Image src="/images/products/water-18l.png" alt="" width={1122} height={1402} priority unoptimized sizes="(max-width: 1024px) 54vw, 34vw" className="h-auto w-full object-contain" />
+          </div>
+          <div className="absolute bottom-[3%] left-[49%] z-40 w-[30%] lg:left-[49%] lg:w-[32%]">
+            <Image src="/images/products/water-1-5l.png" alt="" width={1122} height={1402} unoptimized sizes="(max-width: 1024px) 30vw, 19vw" className="h-auto w-full object-contain" />
+          </div>
+          <div className="absolute bottom-[5%] left-[64%] z-30 w-[23%] lg:left-[64%] lg:w-[25%]">
+            <Image src="/images/products/water-300cc.png" alt="" width={1024} height={1536} unoptimized sizes="(max-width: 1024px) 23vw, 15vw" className="h-auto w-full object-contain" />
+          </div>
+        </div>
+      </div>
+      <div className="wave" aria-hidden="true" />
+    </section>
+  );
 }
