@@ -20,6 +20,7 @@ Documentación ampliada:
 - `docs/agents/PROJECT_CONTEXT.md`
 - `docs/agents/OMI_BUSINESS_CONTEXT.md`
 - `docs/content/WEBSITE_COPY_ES.md`
+- `docs/ai-kit/README.md` (herramientas auxiliares: agentes conceptuales, prompts, SOPs, evaluaciones y plantillas)
 - `docs/image-agents/00-README.md`
 - `docs/image-agents/AGENT_CATALOG.md`
 - `docs/image-agents/OMI_VISUAL_CONTEXT.md`
@@ -58,6 +59,12 @@ Antes de tomar decisiones técnicas o visuales:
 7. Para contenido, producto, ubicación, historia o claims de OMI, lee `docs/agents/OMI_BUSINESS_CONTEXT.md`; no inventes ni completes datos comerciales ausentes.
 
 No presupongas una librería, versión, ruta, comando o arquitectura que no esté confirmada en el repositorio.
+
+## AI Development Kit complementario
+
+Los agentes ejecutables canónicos siguen siendo los perfiles TOML de `.codex/agents/`. Los perfiles Markdown de `docs/ai-kit/agents/` son guías auxiliares y no sustituyen a esos agentes.
+
+Las skills de proyecto están en `.agents/skills/`. Úsalas solo cuando la petición coincida con su descripción. Los prompts, SOPs, evaluaciones y plantillas de `docs/ai-kit/` son recursos opcionales: selecciona únicamente los necesarios y contrasta siempre su contenido genérico con el código real, `docs/agents/PROJECT_RULES.md`, `docs/agents/OMI_BUSINESS_CONTEXT.md` y la petición actual.
 
 ## Especialistas disponibles
 
@@ -273,3 +280,13 @@ Antes de cerrar, comprueba:
 - Todo cambio de código superó la puerta de QA.
 - Toda imagen final superó `image_visual_qa` y conserva los elementos bloqueados.
 - Los elementos exactos de marca proceden de los recursos originales o están claramente marcados como mockup no final.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
