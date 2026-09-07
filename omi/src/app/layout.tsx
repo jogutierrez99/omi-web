@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OMI | Agua mineral natural",
-  description: "Conoce el agua mineral OMI y sus formatos para cada momento.",
+  title: "OMI | Agua mineral de Maracay",
+  description: "Conoce Embotelladora OMI, nuestra agua mineral, productos, ubicación en Maracay y futuras franquicias.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

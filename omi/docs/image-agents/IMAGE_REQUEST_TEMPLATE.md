@@ -7,7 +7,7 @@ objetivo: ""
 destino: hero_web | ficha_producto | redes | banner | impresión_mockup | impresión_final
 mensaje_principal: ""
 productos:
-  - 500_ml
+  - 330_cc
   - 1_5_L
   - 5_L
   - 18_L

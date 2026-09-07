@@ -196,7 +196,7 @@ Máximo: 3 iteraciones automáticas de corrección. Si persiste el mismo defecto
 - La prioridad de fuente es: arte vectorial/PDF aprobado → PNG original con transparencia → fotografía real aprobada → imagen generada aprobada → descripción textual.
 - Conserva como invariantes el número de productos, formatos, proporciones, tapas, asas, materiales, logo, eslogan, capacidades, sello y disposición aprobada.
 - En OMI, la denominación es `AGUA MINERAL` y el eslogan exacto es `Tu salud lo vale`.
-- Los formatos comerciales actuales confirmados son 300 cc, 1,5 L, 5 L y 18 L. No cambies una capacidad ni la intercambies entre envases.
+- Los formatos comerciales actuales confirmados son 330 cc, 1,5 L, 5 L y 18 L. No cambies una capacidad ni la intercambies entre envases.
 - Las etiquetas aprobadas son de film transparente: el plástico, el agua, las nervaduras y los reflejos deben verse en las zonas no impresas.
 - Usa siempre los archivos originales para logo, sello y textos finales. La IA puede integrar una aproximación durante el concepto, pero no constituye un master comercial.
 - Una edición debe declarar qué cambia y qué permanece bloqueado. Si la petición es local, no regeneres innecesariamente toda la escena.

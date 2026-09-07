@@ -42,7 +42,7 @@ Declaraciones facilitadas por la empresa:
 
 | Presentación | Unidad comercial declarada |
 |---|---|
-| 300 cc | Gavera de 15 unidades |
+| 330 cc | Gavera de 15 unidades |
 | 1,5 L | Gavera de 6 unidades |
 | 5 L | Gavera de 2 unidades |
 | 18 L | Botellón individual |

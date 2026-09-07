@@ -41,7 +41,7 @@ Ofrecemos recargas de botellones al detal y diferentes presentaciones para hogar
 
 | Formato | Presentación comercial | Uso sugerido |
 |---|---|---|
-| 300 cc | Gavera de 15 unidades | Consumo personal, reuniones y eventos |
+| 330 cc | Gavera de 15 unidades | Consumo personal, reuniones y eventos |
 | 1,5 L | Gavera de 6 unidades | Hogar y consumo diario |
 | 5 L | Gavera de 2 unidades | Hogares, oficinas y pequeños comercios |
 | 18 L | Botellón individual | Hogares, oficinas y negocios |
@@ -49,7 +49,7 @@ Ofrecemos recargas de botellones al detal y diferentes presentaciones para hogar
 Seguimos trabajando en nuevas presentaciones para ofrecer más opciones y responder a las necesidades particulares de nuestros clientes.
 
 **CTA principal:** Consultar disponibilidad  
-**CTA secundario:** Solicitar información al mayor
+**CTA secundario:** Solicitar información mayorista
 
 ## Reconocimiento
 

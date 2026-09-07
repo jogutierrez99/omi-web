@@ -99,12 +99,12 @@ known_constraints: []
 |---|---|---|
 | 2026-09-05 | Equipo Codex con especialistas frontend, visuales y QA | Todo el repositorio |
 | 2026-09-05 | Etiquetas visuales transparentes y sello dorado en los formatos representados | Producción visual |
-| 2026-09-06 | Catálogo actual: 300 cc, 1,5 L, 5 L y 18 L | Web, contenido e imágenes |
+| 2026-09-06 | Catálogo actual: 330 cc, 1,5 L, 5 L y 18 L | Web, contenido e imágenes |
 | 2026-09-06 | Estructura corporativa de ocho bloques principales | Arquitectura web |
 
 ## Riesgos conocidos
 
-- El formato comercial pequeño confirmado es 300 cc. No usar capacidades anteriores como fuente de verdad.
+- El formato comercial pequeño confirmado es 330 cc. No usar capacidades anteriores como fuente de verdad.
 - Los claims de composición, baja mineralización, bajo sodio y ausencia de cloración deben vincularse a análisis y permisos vigentes antes de presentarse como certificados.
 - La recomendación sanitaria asociada al evento de café de 2024 necesita documentación y nombres oficiales.
 - Faltan datos completos de contacto, mapa y redes.
