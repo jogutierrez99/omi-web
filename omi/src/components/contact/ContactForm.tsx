@@ -2,6 +2,13 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import {
+  countryCallingCodes,
+  DEFAULT_COUNTRY_CALLING_CODE_ID,
+  getCountryCallingCodeId,
+  type CountryCallingCodeId,
+} from "@/src/data/country-calling-codes";
+import { CountryCallingCodeSelect } from "@/src/components/contact/CountryCallingCodeSelect";
+import {
   validateContactForm,
   type ContactApiResponse,
   type ContactErrors,
@@ -15,10 +22,17 @@ export function ContactForm() {
   const [errors, setErrors] = useState<ContactErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [submitError, setSubmitError] = useState("No hemos podido enviar el mensaje. Inténtalo de nuevo en unos minutos.");
+  const [phoneCountryCallingCodeId, setPhoneCountryCallingCodeId] = useState<CountryCallingCodeId>(DEFAULT_COUNTRY_CALLING_CODE_ID);
 
   function updateField(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const field = event.target.name as ContactField;
     setErrors((current) => ({ ...current, [field]: undefined }));
+    if (status !== "idle") setStatus("idle");
+  }
+
+  function updatePhoneCountry(value: CountryCallingCodeId) {
+    setPhoneCountryCallingCodeId(value);
+    setErrors((current) => ({ ...current, phone: undefined }));
     if (status !== "idle") setStatus("idle");
   }
 
@@ -27,10 +41,12 @@ export function ContactForm() {
     if (status === "submitting") return;
     const formElement = event.currentTarget;
     const submittedForm = new FormData(formElement);
+    const localPhone = String(submittedForm.get("phone") ?? "").trim();
+    const selectedCountry = countryCallingCodes.find((country) => getCountryCallingCodeId(country) === phoneCountryCallingCodeId);
     const normalized: ContactFormData = {
       name: String(submittedForm.get("name") ?? "").trim(),
       email: String(submittedForm.get("email") ?? "").trim(),
-      phone: String(submittedForm.get("phone") ?? "").trim(),
+      phone: localPhone && selectedCountry ? `${selectedCountry.callingCode} ${localPhone}` : "",
       subject: String(submittedForm.get("subject") ?? "").trim(),
       message: String(submittedForm.get("message") ?? "").trim(),
       privacyAccepted: submittedForm.has("privacyAccepted"),
@@ -67,6 +83,7 @@ export function ContactForm() {
         return;
       }
       formElement.reset();
+      setPhoneCountryCallingCodeId(DEFAULT_COUNTRY_CALLING_CODE_ID);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -94,7 +111,10 @@ export function ContactForm() {
             <input className={inputClass} id="email" name="email" type="email" autoComplete="email" maxLength={254} onChange={updateField} disabled={status === "submitting"} aria-invalid={Boolean(errors.email)} aria-describedby={errorFor("email")} />
           </Field>
           <Field label="Teléfono" name="phone" error={errors.phone}>
-            <input className={inputClass} id="phone" name="phone" type="tel" autoComplete="tel" maxLength={30} onChange={updateField} disabled={status === "submitting"} aria-invalid={Boolean(errors.phone)} aria-describedby={errorFor("phone")} />
+            <div className="grid grid-cols-[7rem_minmax(0,1fr)] gap-2">
+              <CountryCallingCodeSelect value={phoneCountryCallingCodeId} onChange={updatePhoneCountry} disabled={status === "submitting"} />
+              <input className={`${inputClass} min-w-0`} id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel-national" maxLength={24} placeholder="Número de teléfono" onChange={updateField} disabled={status === "submitting"} aria-invalid={Boolean(errors.phone)} aria-describedby={errorFor("phone")} />
+            </div>
           </Field>
         </div>
         <Field label="Asunto" name="subject" error={errors.subject} required>
