@@ -89,6 +89,14 @@ El agente principal ya cumple la función de orquestación. No debe delegar la c
 
 ## Enrutamiento de peticiones
 
+### Flujo predeterminado de creación: `/create-section`
+
+Cuando el usuario pase una tarea para crear o implementar una sección, usa siempre `docs/ai-kit/prompts/create-section.md`, aunque no escriba `/create-section`. Trata la descripción de la tarea como entrada del prompt y ejecuta el flujo hasta implementación y QA; no te limites a devolver un prompt o un plan.
+
+Si el usuario escribe `/create-section <tarea>`, carga ese mismo archivo y aplica sus instrucciones a la tarea que sigue al comando. Infiere página, propósito y fuente de contenido a partir de la petición y del repositorio; pregunta solo si falta una decisión imprescindible que no pueda resolverse con ese contexto.
+
+Esta regla convierte el prompt de creación en obligatorio para esas tareas. Las peticiones explícitas de ideas, diseño sin implementación, auditoría, corrección de bugs o rediseño conservan su intención y el flujo correspondiente de la tabla siguiente.
+
 Selecciona únicamente los agentes necesarios:
 
 | Intención del usuario | Flujo |
