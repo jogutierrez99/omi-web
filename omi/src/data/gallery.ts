@@ -14,9 +14,9 @@ export type GalleryItem = GalleryBase & (
 );
 
 export const galleryItems: GalleryItem[] = [
-  { id: "familia", type: "video", src: "/media/galeria/omi-familia.mp4", poster: "/media/galeria/omi-familia.webp", title: "Familia OMI", description: "Los cuatro formatos de agua mineral OMI sobre un fondo azul marino.", width: 1280, height: 720, featured: true },
-  { id: "330cc", type: "video", src: "/media/galeria/omi-330cc.mp4", poster: "/media/galeria/omi-330cc.webp", title: "OMI 330 cc", description: "Botella de agua mineral OMI de 330 cc, vista completa en movimiento.", width: 720, height: 1280 },
-  { id: "1-5l", type: "video", src: "/media/galeria/omi-1-5l.mp4", poster: "/media/galeria/omi-1-5l.webp", title: "OMI 1,5 L", description: "Botella de agua mineral OMI de 1,5 litros, vista completa en movimiento.", width: 720, height: 1280 },
-  { id: "5l", type: "video", src: "/media/galeria/omi-5l.mp4", poster: "/media/galeria/omi-5l.webp", title: "OMI 5 L", description: "Envase de agua mineral OMI de 5 litros con asa, visto completo en movimiento.", width: 720, height: 1280 },
-  { id: "18l", type: "video", src: "/media/galeria/omi-18l.mp4", poster: "/media/galeria/omi-18l.webp", title: "OMI 18 L", description: "Botellón de agua mineral OMI de 18 litros, visto completo en movimiento.", width: 720, height: 1280 },
+  { id: "familia", type: "video", src: "/media/galeria/omi-familia-v2.mp4", poster: "/media/galeria/omi-familia.webp", title: "Familia OMI", description: "Los cuatro formatos de agua mineral OMI sobre un fondo azul marino.", width: 1280, height: 720, featured: true },
+  { id: "330cc", type: "video", src: "/media/galeria/omi-330cc-v2.mp4", poster: "/media/galeria/omi-330cc.webp", title: "OMI 330 cc", description: "Botella de agua mineral OMI de 330 cc, vista completa en movimiento.", width: 720, height: 1280 },
+  { id: "1-5l", type: "video", src: "/media/galeria/omi-1-5l-v2.mp4", poster: "/media/galeria/omi-1-5l.webp", title: "OMI 1,5 L", description: "Botella de agua mineral OMI de 1,5 litros, vista completa en movimiento.", width: 720, height: 1280 },
+  { id: "5l", type: "video", src: "/media/galeria/omi-5l-v2.mp4", poster: "/media/galeria/omi-5l.webp", title: "OMI 5 L", description: "Envase de agua mineral OMI de 5 litros con asa, visto completo en movimiento.", width: 720, height: 1280 },
+  { id: "18l", type: "video", src: "/media/galeria/omi-18l-v2.mp4", poster: "/media/galeria/omi-18l.webp", title: "OMI 18 L", description: "Botellón de agua mineral OMI de 18 litros, visto completo en movimiento.", width: 720, height: 1280 },
 ];
