@@ -7,12 +7,14 @@ import type { GalleryItem } from "@/src/data/gallery";
 const actionClass = "rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-[#061643] hover:bg-blue-50 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#58aceb] disabled:opacity-50";
 
 export function GalleryMedia({ item }: { item: GalleryItem }) {
+  const hasOriginalAudio = item.id === "origen-botella";
   const card = useRef<HTMLElement>(null);
   const video = useRef<HTMLVideoElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const expandedVideo = useRef<HTMLVideoElement>(null);
   const expandButton = useRef<HTMLButtonElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(false);
   const [error, setError] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const playback = useRef({ visible: false, nearby: false, reduced: true, manual: false, paused: false, blocked: false, expanded: false });
@@ -26,6 +28,10 @@ export function GalleryMedia({ item }: { item: GalleryItem }) {
     let disposed = false;
     const shouldPlay = () => !disposed && state.visible && !document.hidden && !state.expanded && !state.paused && !state.blocked && (!state.reduced || state.manual);
     const sync = () => {
+      if (hasOriginalAudio && (!state.visible || document.hidden)) {
+        element.muted = true;
+        setSoundEnabled(false);
+      }
       if (state.nearby && !element.getAttribute("src")) {
         element.src = item.src;
         element.load();
@@ -60,7 +66,7 @@ export function GalleryMedia({ item }: { item: GalleryItem }) {
       element.removeEventListener("gallery-playback", sync);
       element.pause();
     };
-  }, [item]);
+  }, [hasOriginalAudio, item]);
 
   useEffect(() => {
     if (!expanded) return;
@@ -87,13 +93,29 @@ export function GalleryMedia({ item }: { item: GalleryItem }) {
     video.current?.dispatchEvent(new Event("gallery-playback"));
   }
 
+  function toggleSound() {
+    const element = video.current;
+    if (!element) return;
+    const enable = element.muted;
+    element.muted = !enable;
+    setSoundEnabled(enable);
+    if (enable && element.paused) {
+      const state = playback.current;
+      state.paused = false;
+      state.manual = true;
+      state.blocked = false;
+      state.nearby = true;
+      element.dispatchEvent(new Event("gallery-playback"));
+    }
+  }
+
   return (
     <article ref={card} className="flex h-full flex-col overflow-hidden rounded-2xl border border-blue-100 bg-white">
       <div className="relative overflow-hidden bg-[#061643]" style={{ aspectRatio: `${item.width} / ${item.height}` }}>
         {item.type === "video" ? (
-          <video ref={video} poster={item.poster} muted loop playsInline preload="none"
+          <video ref={video} poster={item.poster} muted={!soundEnabled} loop playsInline preload="none"
             aria-label={item.description} aria-describedby={`gallery-description-${item.id}`}
-            onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onError={() => { setError(true); setPlaying(false); }}
+            onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); if (hasOriginalAudio) { if (video.current) video.current.muted = true; setSoundEnabled(false); } }} onError={() => { setError(true); setPlaying(false); }}
             className="h-full w-full object-contain" />
         ) : (
           <Image src={item.src} alt={item.description} width={item.width} height={item.height}
@@ -112,6 +134,9 @@ export function GalleryMedia({ item }: { item: GalleryItem }) {
               state.paused = playing; state.manual = !playing; state.blocked = false; state.nearby = true;
               video.current?.dispatchEvent(new Event("gallery-playback"));
             }}>{playing ? "Pausar" : "Reproducir"}</button>}
+          {hasOriginalAudio && item.type === "video" && <button type="button" className={actionClass} disabled={error}
+            aria-label={`${soundEnabled ? "Silenciar" : "Activar sonido de"} ${item.title}`}
+            aria-pressed={soundEnabled} onClick={toggleSound}>{soundEnabled ? "Silenciar" : "Activar sonido"}</button>}
           <button ref={expandButton} type="button" className={actionClass} aria-haspopup="dialog"
             aria-label={`Ampliar ${item.title}`} onClick={() => {
               playback.current.expanded = true;
@@ -133,7 +158,7 @@ export function GalleryMedia({ item }: { item: GalleryItem }) {
           <h3 id={`gallery-modal-${item.id}`} className="font-semibold">{item.title}</h3>
           <button type="button" autoFocus onClick={close} className="rounded-full border border-white/50 px-4 py-2 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-white">Cerrar</button>
         </div>
-        {item.type === "video" ? <video ref={expandedVideo} src={item.src} poster={item.poster} muted loop playsInline controls preload="metadata" aria-label={item.description} className="mx-auto max-h-[75dvh] w-full object-contain" />
+        {item.type === "video" ? <video ref={expandedVideo} src={item.src} poster={item.poster} muted={!hasOriginalAudio} loop playsInline controls preload="metadata" aria-label={item.description} className="mx-auto max-h-[75dvh] w-full object-contain" />
           : <Image src={item.src} alt={item.description} width={item.width} height={item.height} sizes="95vw" className="mx-auto max-h-[75dvh] w-auto max-w-full object-contain" />}
         <span tabIndex={0} className="sr-only" onFocus={event => event.currentTarget.parentElement?.querySelector<HTMLButtonElement>("button")?.focus()} />
       </dialog>}
