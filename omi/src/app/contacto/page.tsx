@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { ContactForm } from "@/src/components/contact/ContactForm";
 import { ContactInfo } from "@/src/components/contact/ContactInfo";
 import { Footer } from "@/src/components/Footer";
 import { Navbar } from "@/src/components/Navbar";
+import { pageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/contacto",
   title: "Contacto | OMI",
   description: "Contacta con OMI para solicitar información sobre nuestros productos, distribución y agua mineral.",
-  alternates: { canonical: "/contacto" },
-};
+});
 
 export default function ContactPage() {
   return (

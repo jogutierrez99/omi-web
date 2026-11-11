@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import { Footer } from "@/src/components/Footer";
 import { Gallery } from "@/src/components/Gallery";
 import { Navbar } from "@/src/components/Navbar";
+import { pageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/galeria",
   title: "Galería | OMI",
   description: "Galería de imágenes y vídeos de los formatos de agua mineral OMI.",
-  alternates: { canonical: "/galeria" },
-};
+});
 
 export default function GalleryPage() {
   return (

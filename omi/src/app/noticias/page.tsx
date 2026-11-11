@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/src/components/Footer";
 import { Navbar } from "@/src/components/Navbar";
+import { pageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/noticias",
   title: "Noticias | OMI",
   description: "Noticias y novedades de OMI. Próximamente compartiremos nuevas publicaciones.",
-  alternates: { canonical: "/noticias" },
-};
+});
 
 export default function NewsPage() {
   return (

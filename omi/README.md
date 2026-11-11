@@ -38,6 +38,16 @@ La primera versión incluye un honeypot y un límite en memoria de 5 solicitudes
 
 Cloudflare Turnstile puede añadirse después incorporando su widget al formulario y verificando el token exclusivamente en `/api/contact` antes de enviar el correo. Las claves deben mantenerse en variables de entorno (solo la clave pública puede exponerse al navegador) y la verificación del servidor debe fallar de forma segura.
 
+## Sitemap e indexación
+
+`npm run build` compila Next.js y genera `public/sitemap.xml` para ese despliegue. Vercel usa este script con la configuración predeterminada de Next.js. Si el proyecto tiene un Build Command personalizado, configúralo como `npm run build`. En local, el archivo se crea con el primer build.
+
+Una página pública nueva bajo `src/app` entra automáticamente si responde con HTML y estado 200 a una petición sin autenticación. El generador comprueba la respuesta de producción local y excluye redirecciones, directivas `noindex` en metadatos o cabeceras y canónicas HTML que apuntan a otra URL. Si una página carece de canónica explícita, se usa su URL en `https://www.omioficial.com`. Las carpetas privadas de Next.js (`_`), los grupos y segmentos de administración, autenticación y privacidad (por ejemplo, `(admin)`, `(auth)` y `(private)`) y los segmentos `api` quedan fuera. Para una página interna que responde 200 en otra ruta, declara `robots: { index: false }` en su metadata o en el layout que la contiene.
+
+Los segmentos dinámicos como `[slug]` requieren una fuente de datos que enumere las URLs públicas reales. Actualmente no existen rutas de ese tipo. Si se añaden, comparte la consulta de registros publicados entre la ruta y el generador del sitemap. El archivo se regenera en cada build. Si en el futuro el contenido cambia entre despliegues, la generación de esas entradas deberá seguir la política de revalidación de la fuente.
+
+Tras desplegar, comprueba que [sitemap.xml](https://www.omioficial.com/sitemap.xml) devuelva XML con las páginas públicas actuales y que [robots.txt](https://www.omioficial.com/robots.txt) responda con `Allow: /` y `Sitemap: https://www.omioficial.com/sitemap.xml`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

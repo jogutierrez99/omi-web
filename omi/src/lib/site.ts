@@ -1,1 +1,3 @@
-export const SITE_URL = "https://www.omioficial.com";
+import site from "./site.json";
+
+export const SITE_URL = site.url;
