@@ -7,6 +7,7 @@ import { Navbar } from "@/src/components/Navbar";
 export const metadata: Metadata = {
   title: "Contacto | OMI",
   description: "Contacta con OMI para solicitar información sobre nuestros productos, distribución y agua mineral.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactPage() {

@@ -6,6 +6,7 @@ import { Navbar } from "@/src/components/Navbar";
 export const metadata: Metadata = {
   title: "Galería | OMI",
   description: "Galería de imágenes y vídeos de los formatos de agua mineral OMI.",
+  alternates: { canonical: "/galeria" },
 };
 
 export default function GalleryPage() {

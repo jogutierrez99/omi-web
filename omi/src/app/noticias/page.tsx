@@ -6,6 +6,7 @@ import { Navbar } from "@/src/components/Navbar";
 export const metadata: Metadata = {
   title: "Noticias | OMI",
   description: "Noticias y novedades de OMI. Próximamente compartiremos nuevas publicaciones.",
+  alternates: { canonical: "/noticias" },
 };
 
 export default function NewsPage() {

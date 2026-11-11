@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SITE_URL } from "@/src/lib/site";
 import "./globals.css";
 import "flag-icons/css/flag-icons.min.css";
 
@@ -14,8 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "OMI | Agua mineral de Maracay",
   description: "Conoce Embotelladora OMI, nuestra agua mineral, productos, ubicación en Maracay y futuras franquicias.",
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
